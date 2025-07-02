@@ -1,0 +1,41 @@
+{
+  "es": {
+    "welcome": "<span>¡Bienvenido!</span> Completa tus datos para generar tu <span>plan personalizado!</span> 💥",
+    "age": "E-mail",
+    "height": "Edad",
+    "weight": "Peso (en kg)",
+    "desiredWeight": "Peso deseado (en kg)",
+    "genderQuestion": "¿Cual es tu sexo?",
+    "male": "Masculino",
+    "female": "Femenino",
+    "activityQuestion": "¿Cuál es su nivel de obesidad?",
+    "activities": ["Ninguno", "Mínima", "Moderada", "Muy alta", "Extremadamente alta"],
+    "submit": "Entrar"
+  },
+  "fr": {
+  "welcome": "<span>Bienvenue!</span> Remplissez vos informations pour générer votre <span>plan personnalisé!</span> 💥",
+  "age": "E-mail",
+  "height": "Âge",
+  "weight": "Poids (en kg)",
+  "desiredWeight": "Poids souhaité (en kg)",
+  "genderQuestion": "Quel est votre sexe?",
+  "male": "Hommes",
+  "female": "Femelle",
+  "activityQuestion": "Quel est votre niveau d'obésité?",
+  "activities": ["Aucun", "Minime", "Modéré", "Très élevé", "Extrêmement élevé"],
+  "submit": "Entrer"
+  },
+  "pt": {
+    "welcome": "<span>Bem-vindo!<span> Preencha seus dados para gerar seu <span>plano personalizado!</span> 💥",
+    "age": "E-mail",
+    "height": "Idade",
+    "weight": "Peso (em kg)",
+    "desiredWeight": "Peso desejado (em kg)",
+    "genderQuestion": "Qual é o seu sexo?",
+    "male": "Masculino",
+    "female": "Feminino",
+    "activityQuestion": "Qual é o seu nível de obesidade?",
+    "activities" : ["Nenhuma", "Mínima", "Moderada", "Muito alta", "Extremamente alta"],
+    "submit": "Entrar"
+  }
+}

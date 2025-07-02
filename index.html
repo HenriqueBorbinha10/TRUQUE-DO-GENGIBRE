@@ -1,109 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Confirmação de Pagamento</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      background: white;
-      padding: 30px 20px;
-      max-width: 400px;
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: left;
-    }
-
-    .container img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      text-align: center;
-      font-weight: bold;
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-
-    label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #28a745;
-      border: none;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #218838;
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        margin: 15px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles/home.css">
+  <link id="logo" rel="shortcut icon">
+  <link rel="manifest" href="scripts/manifest.json"/>
+  <title id="title">App Sal Rosa</title>
 </head>
 <body>
-  <div class="container">
-    <img src="https://media.graphassets.com/resize=fit:crop,height:400,width:800/output=format:webp/compress/v8Ngrv7uSVyJVqJeW6XQ" alt="Banner">
+  <main>
+    <img id="logo1" alt="Logo App Manzana">
 
-    <h2><strong>Para concluir o pagamento, preencha as informações abaixo.</strong></h2>
+    <h1 id="welcomeMessage"></h1>
 
-    <form>
-      <label for="nome">Seu Nome:</label>
-      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    <form action="diagnostico.html" id="formCalc">
+      <input type="text" id="inputIdade" placeholder="" required>
+      <input type="number" id="inputAltura" placeholder="" required>
+      <input type="number" id="inputPeso" placeholder="" required>
+      <input type="number" id="inputPesoDesejado" placeholder="" required>
 
-      <label for="email">Seu E-mail:</label>
-      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+      <h2 id="genderQuestion"></h2>
 
-      <label for="telefone">Número de Telemóvel:</label>
-      <input type="tel" id="telefone" name="telefone" placeholder="Digite seu número" required>
+      <div class="alignRadio">
+        <div class="alignRadioItem">
+          <label for="Masculino" id="labelMasculino"></label>
+          <input type="radio" name="gender" id="Masculino" required>
+        </div>
+        <div class="alignRadioItem">
+          <label for="Femenino" id="labelFemenino"></label>
+          <input type="radio" name="gender" id="Femenino">
+        </div>
+      </div>
 
-      <label for="operadora">Escolha a rede:</label>
-      <select id="operadora" name="operadora" required>
-        <option value="">Selecione</option>
-        <option value="vivo">Vivo</option>
-        <option value="claro">Claro</option>
-        <option value="tim">TIM</option>
-        <option value="oi">Oi</option>
+      <h2 id="activityQuestion"></h2>
+
+      <select id="Actividad" required>
       </select>
 
-      <button type="submit">Concluir</button>
+      <button type="submit" id="submitButton"></button>
     </form>
-  </div>
+  </main>
+  
+  <script src="scripts/lang_index.js"></script>
+  <script src="scripts/calculo.js"></script>
 </body>
 </html>

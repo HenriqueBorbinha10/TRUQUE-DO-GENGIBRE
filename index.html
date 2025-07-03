@@ -24,4 +24,125 @@
     .aviso { background-color: #7f1d1d; color: #fef2f2; padding: 20px; border-radius: 10px; text-transform: uppercase; }
   </style>
 </head>
-<body> ... </body></html>
+<body>
+
+  <!-- Etapa 1 -->
+  <section id="etapa1" class="active">
+    <div class="container">
+      <h1>TRUQUE DO GENGIBRE</h1>
+      <p class="subtitle">DESCUBRA O SEGREDO REVOLUCIONÁRIO DO GENGIBRE</p>
+      <button class="cta-button" onclick="irParaEtapa2()">ACESSAR AGORA</button>
+      <div class="cards">
+        <div class="card"><h3>CHÁS NATURAIS AFRODISÍACOS</h3><p>RECEITAS TRADICIONAIS COM ERVAS LOCAIS.</p></div>
+        <div class="card"><h3>MISTURAS COM INGREDIENTES LOCAIS</h3><p>GENGIBRE, ALHO, MEL E MUITO MAIS.</p></div>
+        <div class="card"><h3>MASSAGENS E APLICAÇÕES</h3><p>TÉCNICAS DE APLICAÇÃO EXTERNA.</p></div>
+        <div class="card"><h3>DICAS</h3><p>CONSELHOS SOBRE ESTILO DE VIDA.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Etapa 2 -->
+  <section id="etapa2">
+    <div class="container">
+      <div class="back" onclick="voltarEtapa1()">&#8592; VOLTAR AO INÍCIO</div>
+      <h1>RECEITAS NATURAIS</h1>
+      <p class="subtitle">DESCUBRA RECEITAS NATURAIS E EFICAZES</p>
+      <div class="cards">
+        <div class="card" onclick="abrirEtapa3('chá de gengibre com mel e limão')">
+          <h3>CHÁ DE GENGIBRE COM MEL E LIMÃO</h3>
+          <p>INGREDIENTES: GENGIBRE, MEL, LIMÃO...</p>
+        </div>
+        <div class="card" onclick="abrirEtapa3('chá de folhas de moringa')">
+          <h3>CHÁ DE FOLHAS DE MORINGA</h3>
+          <p>INGREDIENTES: FOLHAS DE MORINGA, MEL...</p>
+        </div>
+        <div class="card" onclick="abrirEtapa3('mistura poderosa de alho e mel')">
+          <h3>MISTURA PODEROSA DE ALHO E MEL</h3>
+          <p>INGREDIENTES: ALHO, MEL, GENGIBRE...</p>
+        </div>
+        <div class="card" onclick="abrirEtapa3('batido de coco e banana')">
+          <h3>BATIDO DE COCO E BANANA</h3>
+          <p>INGREDIENTES: BANANA, LEITE DE COCO, MEL...</p>
+        </div>
+        <div class="card" onclick="abrirEtapa3('óleo de massagem com gengibre')">
+          <h3>ÓLEO DE MASSAGEM COM GENGIBRE</h3>
+          <p>INGREDIENTES: ÓLEO DE COCO, GENGIBRE...</p>
+        </div>
+        <div class="card" onclick="abrirEtapa3('pasta de aloe vera com mel')">
+          <h3>PASTA DE ALOE VERA COM MEL</h3>
+          <p>INGREDIENTES: ALOE VERA, MEL, AZEITE...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Etapa 3 -->
+  <section id="etapa3">
+    <div class="container">
+      <div class="back" onclick="voltarEtapa2()">&#8592; VOLTAR ÀS RECEITAS</div>
+      <h1 id="titulo-receita"></h1>
+      <p class="subtitle">15-30 MIN &nbsp;&nbsp; 1 PESSOA</p>
+
+      <div class="ingredientes" id="ingredientes"></div>
+      <div class="modo" id="modo"></div>
+      <div class="como" id="como"></div>
+
+      <div class="aviso">
+        <h3>AVISO IMPORTANTE</h3>
+        <p>CADA CORPO É DIFERENTE. USE COM RESPONSABILIDADE. SE TIVER CONDIÇÃO MÉDICA, CONSULTE UM PROFISSIONAL ANTES DE USAR ESTAS RECEITAS.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const receitas = {
+      "chá de gengibre com mel e limão": {
+        ingredientes: ["1 PEDAÇO DE GENGIBRE", "2 COLHERES DE MEL", "SUMO DE MEIO LIMÃO", "2 CHÁVENAS DE ÁGUA"],
+        modo: ["CORTA O GENGIBRE.", "FERVE A ÁGUA.", "ADICIONA GENGIBRE, FERVE 10 MIN.", "ADICIONA MEL E LIMÃO."],
+        como: "BEBE 1 CHÁVENA EM JEJUM POR 2-3 SEMANAS."
+      },
+      "chá de folhas de moringa": {
+        ingredientes: ["10-15 FOLHAS DE MORINGA", "2 CHÁVENAS DE ÁGUA", "1 COLHER DE MEL"],
+        modo: ["LAVA AS FOLHAS.", "FERVE A ÁGUA COM AS FOLHAS 5 MIN.", "COA E ADICIONA MEL."],
+        como: "BEBE 1 CHÁVENA EM JEJUM DURANTE 2 SEMANAS."
+      },
+      "mistura poderosa de alho e mel": {
+        ingredientes: ["3 DENTES DE ALHO", "3 COLHERES DE MEL", "1 COLHER DE GENGIBRE RALADO"],
+        modo: ["AMASSA O ALHO.", "MISTURA COM MEL E GENGIBRE.", "GUARDA EM POTE."],
+        como: "TOMA 1 COLHER EM JEJUM POR 7 DIAS."
+      },
+      "batido de coco e banana": {
+        ingredientes: ["1 BANANA", "1/2 CHÁVENA DE LEITE DE COCO", "1 COLHER DE MEL"],
+        modo: ["BATE TUDO NO LIQUIDIFICADOR.", "BEBA FRESCO."],
+        como: "TOMA NO CAFÉ DA MANHÃ."
+      },
+      "óleo de massagem com gengibre": {
+        ingredientes: ["4 COLHERES DE ÓLEO DE COCO", "1 PEDAÇO DE GENGIBRE", "2 GOTAS DE ÓLEO ESSENCIAL"],
+        modo: ["AQUECE O ÓLEO COM GENGIBRE.", "DEIXA ARREFECER E APLICA."],
+        como: "USA EM MASSAGENS DIÁRIAS."
+      },
+      "pasta de aloe vera com mel": {
+        ingredientes: ["2 FOLHAS DE ALOE VERA", "2 COLHERES DE MEL", "1 COLHER DE AZEITE"],
+        modo: ["RASPA O GEL DA ALOE.", "MISTURA COM MEL E AZEITE.", "GUARDA EM POTE."],
+        como: "APLICA NA PELE UMA VEZ AO DIA."
+      }
+    };
+    function irParaEtapa2() { mostrarEtapa('etapa2'); }
+    function voltarEtapa1() { mostrarEtapa('etapa1'); }
+    function abrirEtapa3(receita) {
+      const dados = receitas[receita];
+      document.getElementById('titulo-receita').textContent = receita.toUpperCase();
+      document.getElementById('ingredientes').innerHTML = `<h2>INGREDIENTES</h2><ul>${dados.ingredientes.map(i => `<li>${i}</li>`).join('')}</ul>`;
+      document.getElementById('modo').innerHTML = `<h2>MODO DE PREPARO</h2><ol>${dados.modo.map(m => `<li>${m}</li>`).join('')}</ol>`;
+      document.getElementById('como').innerHTML = `<h2>COMO USAR</h2><p>${dados.como}</p>`;
+      mostrarEtapa('etapa3');
+    }
+    function voltarEtapa2() { mostrarEtapa('etapa2'); }
+    function mostrarEtapa(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
